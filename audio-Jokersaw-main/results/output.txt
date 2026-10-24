@@ -1,0 +1,384 @@
+Device: cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Class mapping:
+{'Accipiter striatus': 0, 'Acropternis orthonyx': 1}
+
+Sampling rate: 44100
+Array shape: (220500,)
+Array dtype: float64
+
+Loading MFCC features from cache...
+
+Final MFCC shapes:
+X_train_mfcc: (320, 80)
+y_train: (320,)
+X_test_mfcc: (80, 80)
+y_test: (80,)
+
+PCA explained variance ratio:
+[0.30868453 0.22433507]
+Total explained variance: 0.5330196
+X_all shape: (400, 80)
+X_all_scaled shape: (400, 80)
+X_2d shape: (400, 2)
+Unique labels: [0 1]
+
+Evaluating classical models on MFCC features...
+
+Model: Logistic Regression
+Accuracy: 0.9375
+Macro-F1: 0.9370177924736262
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.95      0.93      0.94        44
+Acropternis orthonyx       0.92      0.94      0.93        36
+
+            accuracy                           0.94        80
+           macro avg       0.94      0.94      0.94        80
+        weighted avg       0.94      0.94      0.94        80
+
+
+Model: SVM RBF
+Accuracy: 0.9625
+Macro-F1: 0.96201930685235
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.96      0.98      0.97        44
+Acropternis orthonyx       0.97      0.94      0.96        36
+
+            accuracy                           0.96        80
+           macro avg       0.96      0.96      0.96        80
+        weighted avg       0.96      0.96      0.96        80
+
+
+Model: Random Forest
+Accuracy: 0.975
+Macro-F1: 0.9746031746031746
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.96      1.00      0.98        44
+Acropternis orthonyx       1.00      0.94      0.97        36
+
+            accuracy                           0.97        80
+           macro avg       0.98      0.97      0.97        80
+        weighted avg       0.98      0.97      0.97        80
+
+
+Model: KNN
+Accuracy: 0.9
+Macro-F1: 0.8999374609130707
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.97      0.84      0.90        44
+Acropternis orthonyx       0.83      0.97      0.90        36
+
+            accuracy                           0.90        80
+           macro avg       0.90      0.91      0.90        80
+        weighted avg       0.91      0.90      0.90        80
+
+
+Summary for MFCC:
+  feature_space                model  accuracy  f1_macro
+2          MFCC        Random Forest    0.9750  0.974603
+1          MFCC              SVM RBF    0.9625  0.962019
+0          MFCC  Logistic Regression    0.9375  0.937018
+3          MFCC                  KNN    0.9000  0.899937
+
+Loading AST model...
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 3979.97it/s]
+[transformers] [1mASTModel LOAD REPORT[0m from: MIT/ast-finetuned-audioset-10-10-0.4593
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+classifier.layernorm.weight | UNEXPECTED |  | 
+classifier.dense.bias       | UNEXPECTED |  | 
+classifier.layernorm.bias   | UNEXPECTED |  | 
+classifier.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+AST model loaded
+AST required sampling rate: 16000
+
+Loading AST features from cache...
+
+Final AST shapes:
+X_train_ast: (320, 768)
+y_train_ast: (320,)
+X_test_ast: (80, 768)
+y_test_ast: (80,)
+
+PCA explained variance ratio:
+[0.13327892 0.10646404]
+Total explained variance: 0.23974296
+X_all shape: (400, 768)
+X_all_scaled shape: (400, 768)
+X_2d shape: (400, 2)
+Unique labels: [0 1]
+
+Evaluating classical models on AST features...
+
+Model: Logistic Regression
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Model: SVM RBF
+Accuracy: 0.975
+Macro-F1: 0.9746031746031746
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.96      1.00      0.98        44
+Acropternis orthonyx       1.00      0.94      0.97        36
+
+            accuracy                           0.97        80
+           macro avg       0.98      0.97      0.97        80
+        weighted avg       0.98      0.97      0.97        80
+
+
+Model: Random Forest
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Model: KNN
+Accuracy: 0.95
+Macro-F1: 0.9497171590194846
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      0.93      0.95        44
+Acropternis orthonyx       0.92      0.97      0.95        36
+
+            accuracy                           0.95        80
+           macro avg       0.95      0.95      0.95        80
+        weighted avg       0.95      0.95      0.95        80
+
+
+Summary for AST:
+  feature_space                model  accuracy  f1_macro
+0           AST  Logistic Regression    0.9875  0.987340
+2           AST        Random Forest    0.9875  0.987340
+1           AST              SVM RBF    0.9750  0.974603
+3           AST                  KNN    0.9500  0.949717
+
+Training classification head on frozen AST...
+  batch 10/80 | loss=0.7412
+  batch 20/80 | loss=0.6349
+  batch 30/80 | loss=0.3819
+  batch 40/80 | loss=0.3366
+  batch 50/80 | loss=0.3220
+  batch 60/80 | loss=0.1837
+  batch 70/80 | loss=0.2676
+  batch 80/80 | loss=0.2882
+Epoch 1/5 | train_loss=0.4995, train_f1=0.7655 | test_loss=0.3085, test_f1=0.9101
+  batch 10/80 | loss=0.3627
+  batch 20/80 | loss=0.2121
+  batch 30/80 | loss=0.1589
+  batch 40/80 | loss=0.4048
+  batch 50/80 | loss=0.0723
+  batch 60/80 | loss=0.4048
+  batch 70/80 | loss=0.1046
+  batch 80/80 | loss=0.1497
+Epoch 2/5 | train_loss=0.2540, train_f1=0.9187 | test_loss=0.2255, test_f1=0.9747
+  batch 10/80 | loss=0.3889
+  batch 20/80 | loss=0.0961
+  batch 30/80 | loss=0.1669
+  batch 40/80 | loss=0.3092
+  batch 50/80 | loss=0.1213
+  batch 60/80 | loss=0.1446
+  batch 70/80 | loss=0.0864
+  batch 80/80 | loss=0.2325
+Epoch 3/5 | train_loss=0.1731, train_f1=0.9687 | test_loss=0.1867, test_f1=0.9622
+  batch 10/80 | loss=0.0669
+  batch 20/80 | loss=0.0726
+  batch 30/80 | loss=0.0998
+  batch 40/80 | loss=0.1923
+  batch 50/80 | loss=0.0225
+  batch 60/80 | loss=0.0445
+  batch 70/80 | loss=0.0927
+  batch 80/80 | loss=0.1519
+Epoch 4/5 | train_loss=0.1618, train_f1=0.9531 | test_loss=0.1556, test_f1=0.9747
+  batch 10/80 | loss=0.1321
+  batch 20/80 | loss=0.0630
+  batch 30/80 | loss=0.0632
+  batch 40/80 | loss=0.0576
+  batch 50/80 | loss=0.5649
+  batch 60/80 | loss=0.0968
+  batch 70/80 | loss=0.1757
+  batch 80/80 | loss=0.1325
+Epoch 5/5 | train_loss=0.1241, train_f1=0.9719 | test_loss=0.1420, test_f1=0.9747
+
+Frozen AST + classification head final result:
+Test loss: 0.14198683034628629
+Test accuracy: 0.975
+Test macro-F1: 0.9747474747474747
+
+Fine-tuning AST backbone + classification head...
+  batch 10/80 | loss=0.0573
+  batch 20/80 | loss=0.0025
+  batch 30/80 | loss=0.1343
+  batch 40/80 | loss=0.0025
+  batch 50/80 | loss=0.0210
+  batch 60/80 | loss=0.3063
+  batch 70/80 | loss=0.0066
+  batch 80/80 | loss=0.0002
+Fine-tune epoch 1/1 | train_loss=0.0976, train_f1=0.9719 | test_loss=0.0975, test_f1=0.9873
+
+Fine-tuned AST + classification head final result:
+Test loss: 0.09747316810689881
+Test accuracy: 0.9875
+Test macro-F1: 0.9873397689507833
+
+Loading fine-tuned AST features from cache...
+
+Final fine-tuned AST shapes:
+X_train_finetuned_ast: (320, 768)
+y_train_finetuned_ast: (320,)
+X_test_finetuned_ast: (80, 768)
+y_test_finetuned_ast: (80,)
+
+PCA explained variance ratio:
+[0.28858367 0.06646151]
+Total explained variance: 0.35504517
+X_all shape: (400, 768)
+X_all_scaled shape: (400, 768)
+X_2d shape: (400, 2)
+Unique labels: [0 1]
+
+Evaluating classical models on Fine-tuned AST features...
+
+Model: Logistic Regression
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Model: SVM RBF
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Model: Random Forest
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Model: KNN
+Accuracy: 0.9875
+Macro-F1: 0.9873397689507833
+
+Classification report:
+                      precision    recall  f1-score   support
+
+  Accipiter striatus       0.98      1.00      0.99        44
+Acropternis orthonyx       1.00      0.97      0.99        36
+
+            accuracy                           0.99        80
+           macro avg       0.99      0.99      0.99        80
+        weighted avg       0.99      0.99      0.99        80
+
+
+Summary for Fine-tuned AST:
+    feature_space                model  accuracy  f1_macro
+0  Fine-tuned AST  Logistic Regression    0.9875   0.98734
+1  Fine-tuned AST              SVM RBF    0.9875   0.98734
+2  Fine-tuned AST        Random Forest    0.9875   0.98734
+3  Fine-tuned AST                  KNN    0.9875   0.98734
+
+Best feature space: Fine-tuned AST
+
+Closest pair:
+Indexes: 20 47
+Distance: 0.06380975
+Classes: Acropternis orthonyx | Acropternis orthonyx
+
+Farthest pair:
+Indexes: 6 22
+Distance: 1.5857309
+Classes: Acropternis orthonyx | Accipiter striatus
+
+All experiments finished.
+
+MFCC results:
+  feature_space                model  accuracy  f1_macro
+2          MFCC        Random Forest    0.9750  0.974603
+1          MFCC              SVM RBF    0.9625  0.962019
+0          MFCC  Logistic Regression    0.9375  0.937018
+3          MFCC                  KNN    0.9000  0.899937
+
+AST results:
+  feature_space                model  accuracy  f1_macro
+0           AST  Logistic Regression    0.9875  0.987340
+2           AST        Random Forest    0.9875  0.987340
+1           AST              SVM RBF    0.9750  0.974603
+3           AST                  KNN    0.9500  0.949717
+
+Fine-tuned AST results:
+    feature_space                model  accuracy  f1_macro
+0  Fine-tuned AST  Logistic Regression    0.9875   0.98734
+1  Fine-tuned AST              SVM RBF    0.9875   0.98734
+2  Fine-tuned AST        Random Forest    0.9875   0.98734
+3  Fine-tuned AST                  KNN    0.9875   0.98734

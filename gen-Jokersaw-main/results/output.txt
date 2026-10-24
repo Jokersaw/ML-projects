@@ -1,0 +1,45 @@
+Device: cuda
+Train size: 60000
+Test size: 10000
+Image shape: torch.Size([1, 28, 28])
+Label: 9
+Epoch [1/10], train loss: 0.024257, test loss: 0.013367
+Epoch [2/10], train loss: 0.011759, test loss: 0.011012
+Epoch [3/10], train loss: 0.010276, test loss: 0.009989
+Epoch [4/10], train loss: 0.009565, test loss: 0.009475
+Epoch [5/10], train loss: 0.009095, test loss: 0.009081
+Epoch [6/10], train loss: 0.008751, test loss: 0.008810
+Epoch [7/10], train loss: 0.008493, test loss: 0.008538
+Epoch [8/10], train loss: 0.008287, test loss: 0.008549
+Epoch [9/10], train loss: 0.008115, test loss: 0.008252
+Epoch [10/10], train loss: 0.007973, test loss: 0.008171
+Epoch [1/30], D loss: 0.684508, G loss: 0.840767
+Epoch [2/30], D loss: 0.681970, G loss: 0.834790
+Epoch [3/30], D loss: 0.667020, G loss: 0.852181
+Epoch [4/30], D loss: 0.649262, G loss: 0.903410
+Epoch [5/30], D loss: 0.668408, G loss: 0.871000
+Epoch [6/30], D loss: 0.664870, G loss: 0.871585
+Epoch [7/30], D loss: 0.665416, G loss: 0.870847
+Epoch [8/30], D loss: 0.669796, G loss: 0.864195
+Epoch [9/30], D loss: 0.673977, G loss: 0.857853
+Epoch [10/30], D loss: 0.676914, G loss: 0.848255
+Epoch [11/30], D loss: 0.678519, G loss: 0.844277
+Epoch [12/30], D loss: 0.680335, G loss: 0.841508
+Epoch [13/30], D loss: 0.680394, G loss: 0.838385
+Epoch [14/30], D loss: 0.680177, G loss: 0.836398
+Epoch [15/30], D loss: 0.681053, G loss: 0.834192
+Epoch [16/30], D loss: 0.681014, G loss: 0.833240
+Epoch [17/30], D loss: 0.681470, G loss: 0.831811
+Epoch [18/30], D loss: 0.680927, G loss: 0.831943
+Epoch [19/30], D loss: 0.681827, G loss: 0.830362
+Epoch [20/30], D loss: 0.681534, G loss: 0.829419
+Epoch [21/30], D loss: 0.682447, G loss: 0.828254
+Epoch [22/30], D loss: 0.682825, G loss: 0.827608
+Epoch [23/30], D loss: 0.682647, G loss: 0.827512
+Epoch [24/30], D loss: 0.683581, G loss: 0.826785
+Epoch [25/30], D loss: 0.683462, G loss: 0.825416
+Epoch [26/30], D loss: 0.683297, G loss: 0.825704
+Epoch [27/30], D loss: 0.683318, G loss: 0.823273
+Epoch [28/30], D loss: 0.683711, G loss: 0.824070
+Epoch [29/30], D loss: 0.683953, G loss: 0.823526
+Epoch [30/30], D loss: 0.683782, G loss: 0.821809

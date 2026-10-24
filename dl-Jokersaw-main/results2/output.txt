@@ -1,0 +1,36 @@
+dataset - digits
+
+hidden = 32
+centers = 64
+gamma = 0.05
+optimizer = Adam
+epochs = 500
+
+LINEAR MODELS
+linear_d1_id: params=650, transforms=1, train_acc=0.955, test_acc=0.917
+linear_d2_relu: params=2410, transforms=2, train_acc=0.997, test_acc=0.964
+linear_d3_relu: params=3466, transforms=3, train_acc=1.000, test_acc=0.969
+linear_d4_relu: params=4522, transforms=4, train_acc=1.000, test_acc=0.958
+
+LINEAR RESIDUAL MODELS
+residual_1block_relu: params=4522, transforms=4, train_acc=1.000, test_acc=0.961
+residual_2block_relu: params=6634, transforms=6, train_acc=1.000, test_acc=0.950
+residual_3block_relu: params=8746, transforms=8, train_acc=1.000, test_acc=0.931
+
+RBF MODELS
+rbf_d2: params=4746, transforms=2, train_acc=0.822, test_acc=0.794
+rbf_d3: params=8842, transforms=3, train_acc=0.682, test_acc=0.706
+rbf_d4: params=12938, transforms=4, train_acc=0.431, test_acc=0.439
+
+RBF RESIDUAL MODELS
+rbf_residual_1block: params=8842, transforms=3, train_acc=0.843, test_acc=0.808
+rbf_residual_2block: params=12938, transforms=4, train_acc=0.818, test_acc=0.786
+
+MIXED MODELS
+mixed_rbf_linear_relu: params=6506, transforms=3, train_acc=0.943, test_acc=0.919
+mixed_linear_rbf: params=4778, transforms=3, train_acc=0.983, test_acc=0.950
+mixed_linear_rbf_linear: params=6538, transforms=4, train_acc=0.999, test_acc=0.956
+
+MIXED RESIDUAL MODELS
+mixed_rbf_residual_relu: params=13066, transforms=4, train_acc=0.968, test_acc=0.931
+mixed_linear_rbf_residual: params=13098, transforms=5, train_acc=0.999, test_acc=0.967
